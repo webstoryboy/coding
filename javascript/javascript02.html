@@ -7,6 +7,7 @@
     <title>자바스크립트 : 데이터 불러오기</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dracula.css">
 </head>
 <body>
     <header id="header">
@@ -14,7 +15,7 @@
         <nav class="header_nav">
             <ul>
                 <li><a href="javascript01.html">데이터 저장하기</a></li>
-                <li><a href="javascript02.html">데이터 불러오기</a></li>
+                <li class="active"><a href="javascript02.html">데이터 불러오기</a></li>
                 <li><a href="javascript03.html">데이터 실행하기</a></li>
                 <li><a href="javascript04.html">데이터 제어하기</a></li>
             </ul>
@@ -30,6 +31,7 @@
             <ul class="study">
                 <li><a href="#">기본 규칙</a></li>
                 <li><a href="#">기본 명령어</a></li>
+                <li><a href="#">연산자</a></li>
             </ul>
         </nav>
     </header>
@@ -63,8 +65,25 @@
                 <li><a href="#sample23">23. 객체 : 데이터 불러오기 : 객체구조분해할당</a></li>
             </ul>
         </div>
-        <div class="main_script"></div>
-        <div class="main_desc"></div>
+        <div class="main_sample">
+            <div id="sample01" class="sample">
+                <h3>01. 변수 : 데이터 저장</h3>
+                <p></p>
+                <div class="script">
+<pre><code class="language-js">
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample01_result">
+                            
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+        </div>
     </main>
     <!-- //main -->
 
@@ -72,5 +91,117 @@
         <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
     </footer>
     <!-- //footer -->
+
+    <script src="assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+    <script>
+        //01 
+        {
+            // let x = 100;
+            // let y = 200;
+            // let z = "javascript";
+
+            let x = 100, 
+                y = 200, 
+                z = "javascript";
+
+            document.write(x)
+            document.write(y)
+            document.write(z)
+        }
+
+        document.write("<br><br>");
+
+        //02 
+        {
+            const x = 100,
+                  y = 200,
+                  z = "javascript";
+
+            document.write(x)
+            document.write(y)
+            document.write(z)
+        }
+
+        document.write("<br><br>");
+
+        //03
+        {
+            const arr = [100, 200, "javascript"];
+
+            document.write(arr[0]);
+            document.write(arr[1]);
+            document.write(arr[2]);
+        }
+
+        document.write("<br><br>");
+
+        //04 
+        {
+            const arr = [100, 200, ["javascript", "jquery"]];
+
+            document.write(arr[0]);
+            document.write(arr[1]);
+            document.write(arr[2][0]);
+            document.write(arr[2][1]);
+        }
+
+        document.write("<br><br>");
+
+        //05
+        {
+            const arr = [100, 200, "javascript"];
+
+            document.write(arr.length);
+        }
+
+        document.write("<br><br>");
+
+        //06
+        {
+            const arr = [100, 200, 300, 400, 500];
+
+            // document.write(arr[0]);
+            // document.write(arr[1]);
+            // document.write(arr[2]);
+            // document.write(arr[3]);
+            // document.write(arr[4]);
+
+            //for(초기값, 조건식, 증감식)
+            for(let i=0; i<arr.length; i++){
+                document.write(arr[i]);
+            }
+        }
+
+        document.write("<br><br>");
+
+        //07 forEach()
+        {
+            const num = [100, 200, 300, 400, 500];
+
+            //for문을 이용해서 출력.....
+            for( let i=0; i<num.length; i++ ){
+                document.write(num[i]);
+            }
+
+            document.write("<br><br>");
+
+            //forEach()를 이용해서 출력
+            num.forEach(function(el){
+                document.write(el);
+            });
+
+            document.write("<br><br>");
+
+            // forEach() 3가지 인자(parameter)값
+            num.forEach(function(element, index, array){
+                document.write(element,"<br>");
+                document.write(index,"<br>");
+                document.write(array,"<br>");
+            });
+        }
+    </script>
 </body>
 </html>

@@ -8,19 +8,13 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dracula.css">
-
-    <style>
-        body {
-            padding-bottom: 600px;
-        }
-    </style>
 </head>
 <body>
     <header id="header">
         <h1>Javascript</h1>
         <nav class="header_nav">
             <ul>
-                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li class="active"><a href="javascript01.html">데이터 저장하기</a></li>
                 <li><a href="javascript02.html">데이터 불러오기</a></li>
                 <li><a href="javascript03.html">데이터 실행하기</a></li>
                 <li><a href="javascript04.html">데이터 제어하기</a></li>
@@ -37,6 +31,7 @@
             <ul class="study">
                 <li><a href="#">기본 규칙</a></li>
                 <li><a href="#">기본 명령어</a></li>
+                <li><a href="#">연산자</a></li>
             </ul>
         </nav>
     </header>
@@ -411,6 +406,57 @@ document.write(obj.c);
                 </div>
             </div>
             <!-- //sample13 -->
+
+            <div id="sample14" class="sample">
+                <h3>14. 객체</h3>
+                <p></p>
+                <div class="script">
+<pre><code class="language-js">const obj = [
+    {a:100, b:200},
+    {c:"javascript"}
+];
+
+document.write(obj[0].a);
+document.write(obj[0].b);
+document.write(obj[1].c);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample14_result">100<br>200<br>javascript</div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample14 -->
+
+            <div id="sample15" class="sample">
+                <h3>15. 객체</h3>
+                <p></p>
+                <div class="script">
+<pre><code class="language-js">const obj = {
+    a: 100,
+    b: [200, 300],
+    c: {x: 400, y: 500},
+    d: "javascript"
+}
+
+document.write(obj.a);
+document.write(obj.b[0]);
+document.write(obj.b[1]);
+document.write(obj.c.x);
+document.write(obj.c.y);
+document.write(obj.d)
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과보기</summary>
+                        <div class="sample15_result">100<br>200<br>300<br>400<br>500<br>javascript</div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample15 -->
         </div>
     </main>
     <!-- //main -->
@@ -623,9 +669,9 @@ document.write(obj.c);
                 {c:"javascript"}
             ];
 
-            document.write(obj[0].a);
-            document.write(obj[0].b);
-            document.write(obj[1].c);
+            // document.write(obj[0].a);
+            // document.write(obj[0].b);
+            // document.write(obj[1].c);
         }
 
         //15 객체 : 객체 속에 배열
@@ -637,14 +683,57 @@ document.write(obj.c);
                 d: "javascript"
             }
 
+            // document.write(obj.a);
+            // document.write(obj.b[0]);
+            // document.write(obj.b[1]);
+            // document.write(obj.c.x);
+            // document.write(obj.c.y);
+            // document.write(obj.d);
+        }
+
+        // 객체 : 객체 속에 변수
+        {
+            const a = 100;
+            const b = 200;
+            const c = "javascript";
+
+            const obj = { a, b, c }
+
+            document.write(obj.a);
+            document.write(obj.b);
+            document.write(obj.c);
+        }
+
+        // 객체 : 객체 속에 함수
+        {
+            const obj = {
+                a : 100,
+                b : [200, 300],
+                c : {x:400, y:500},
+                d : "javascript",
+                e : function(){
+                    document.write("자바스크립트가 실행되었습니다.");
+                },
+                f : function(){
+                    document.write( obj.d + "가 실행되었습니다.");
+                },
+                g : function(){
+                    document.write( this.d + "가 실행되었습니다.");
+                }
+            }
+
             document.write(obj.a);
             document.write(obj.b[0]);
             document.write(obj.b[1]);
+            document.write(obj.b);
             document.write(obj.c.x);
             document.write(obj.c.y);
-            document.write(obj.d)
+            document.write(obj.c);
+            document.write(obj.d);
+            obj.e();
+            obj.f();
+            obj.g();
         }
-
     </script>
 </body>
 </html>
