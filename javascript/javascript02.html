@@ -374,16 +374,119 @@ num.map(function(element, index, array){
     <script>
         hljs.highlightAll();
     </script>
-    <script>
-        //
-        const arr = [1,2,3,4,5,6,7,8,9];
+    <script>    
+        //11 펼침연산자(Spread Operator)
+        {
+            const num = [100, 200, 300, 400, 500];
 
-        //for문을 이용해서 하나씩 출력해주세요!
-        //forEach() 이용해서 하나씩 출력해주세요!
-        //map() 이용해서 하나씩 출력해주세요!
-        //for in 이용해서 하나씩 출력해주세요!
-        //for of 이용해서 하나씩 출력해주세요!
+            document.write(num, "<br>");
+            document.write(num[0],num[1],num[2],num[3],num[4], "<br>");
+            document.write(...num);
+        }
 
+        document.write("<br>");
+
+        //12 배열구조할당(Destructruing assignment)
+        {
+            let a, b, c;
+
+            [a, b, c] = [100, 200, "javascript"];
+
+            document.write(a);
+            document.write(b);
+            document.write(c);
+        }
+
+        //객체 : 데이터 불러오기 : 기본
+        {
+            const obj = {
+                a : 100,
+                b : 200,
+                c : "javascript"
+            }
+
+            document.write(obj.a);
+            document.write(obj.b);
+            document.write(obj.c);
+        }
+
+        document.write("<br>");
+
+        //14 객체
+        {
+            const obj = {
+                a : 100,
+                b : 200,
+                c : "javascript"
+            }
+
+            document.write(Object.keys(obj));
+            document.write(Object.values(obj));
+            document.write(Object.entries(obj));
+        }
+
+        //15. 객체 : 데이터 불러오기 : 변수
+        {
+            const obj = {
+                a : 100,
+                b : 200,
+                c : "javascript"
+            }
+
+            const name1 = obj.a;
+            const name2 = obj.b;
+            const name3 = obj.c;
+
+            document.write(name1);
+            document.write(name2);
+            document.write(name3);
+        }
+
+        //16. 객체 : 데이터 불러오기 : for in
+        {
+            const obj = {
+                a : 100,
+                b : 200,
+                c : "javascript"
+            }
+
+            for( let key in obj ){
+                document.write(obj[key]);
+            }
+        }
+
+        document.write("<br><br>");
+
+        //17. 객체 : 데이터 불러오기 : map()
+        {
+            const obj = [
+                {a: 100, b: 200, c: "javascript"}
+            ];
+
+            obj.map((el) => {
+                document.write(el.a);
+                document.write(el.b);
+                document.write(el.c);
+            });
+        }
+        document.write("<br>");
+
+        //18. 객체 : 데이터 불러오기 : hasOwnProperty()
+        {
+            const obj = {
+                a: 100,
+                b: 200,
+                c: "javascript"
+            }
+            document.write(obj.hasOwnProperty("a"));
+            document.write(obj.hasOwnProperty("b"));
+            document.write(obj.hasOwnProperty("c"));
+            document.write(obj.hasOwnProperty("d"));
+            document.write("a" in obj);
+            document.write("b" in obj);
+            document.write("c" in obj);
+            document.write("d" in obj);
+        }
     </script>
 </body>
 </html>

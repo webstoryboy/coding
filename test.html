@@ -1,19 +1,623 @@
-&lt;!DOCTYPE html&gt;
-&lt;html lang="ko"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Javasript&lt;/title&gt;
-
-    &lt;!-- 1. 외부 파일로 로드하는 방법 --&gt;
-    &lt;script type="text/Javasript" src="js/script.js"&gt;&lt;/script&gt;
-
-    &lt;!-- 2. script 태그 사이에 기술하는 방법 --&gt;
-    &lt;script&gt;
-        document.write("Javasript");
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;!-- 3. 태그에 직접 기술하는 방법 --&gt;
-    &lt;a href="#" onclick="alert('Javasript')"&gt;&lt;/a&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+<script>
+	// 1
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://kim0617.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend1").append(articleData);
+			}
+		}
+	});
+	// 2
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://syumay.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend2").append(articleData);
+			}
+		}
+	});
+	// 
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://cod-study.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend3").append(articleData);
+			}
+		}
+	});
+	// 4
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://corine-222.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend4").append(articleData);
+			}
+		}
+	});
+	// 5
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://younghwan112.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend5").append(articleData);
+			}
+		}
+	});
+	// 6
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://se-se.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend6").append(articleData);
+			}
+		}
+	});
+	// 7
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://kimsangjun.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend7").append(articleData);
+			}
+		}
+	});
+	// 8
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://mo0647.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend8").append(articleData);
+			}
+		}
+	});
+	// 9
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://kde66034.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend9").append(articleData);
+			}
+		}
+	});
+	// 10
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://kkb7528.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend10").append(articleData);
+			}
+		}
+	});
+	// 11
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://hjkang306.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend11").append(articleData);
+			}
+		}
+	});
+	// 12
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://damlong.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend12").append(articleData);
+			}
+		}
+	});
+	// 13
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://kkk72065.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend13").append(articleData);
+			}
+		}
+	});
+	// 14
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://yhcode.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend14").append(articleData);
+			}
+		}
+	});
+	// 15
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://sunhey.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend15").append(articleData);
+			}
+		}
+	});
+	// 16
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://sshin4882.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend16").append(articleData);
+			}
+		}
+	});
+	// 17
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://heesongs.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend17").append(articleData);
+			}
+		}
+	});
+		// 18
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://piowm123.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend18").append(articleData);
+			}
+		}
+	});
+	// 19
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://sukjun2.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend19").append(articleData);
+			}
+		}
+	});
+		// 20
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://ipkg7210.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend20").append(articleData);
+			}
+		}
+	});
+		// 21
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://youcodein.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend21").append(articleData);
+			}
+		}
+	});
+		// 22
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://dw9605.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend22").append(articleData);
+			}
+		}
+	});
+		// 23
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://fkdldhs8484.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend23").append(articleData);
+			}
+		}
+	});
+		// 24
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://oranssy.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend24").append(articleData);
+			}
+		}
+	});
+		// 25
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://damin0842.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend25").append(articleData);
+			}
+		}
+	});
+		// 26
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://palepinkday.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend26").append(articleData);
+			}
+		}
+	});
+			// 27
+	$.ajax({
+		url: "https://api.rss2json.com/v1/api.json?rss_url=https://enny.tistory.com/rss",
+		dataType: "json",
+		success: function(data) {
+			for (var i = 0; i < 4; i++) {
+				let articleData = `
+					<article>
+						<a href="${data.items[i].link}" target="_blank" class="link-article">
+							<img src="${data.items[i].thumbnail}" alt="" />
+						</a>
+						<div class="article-content">
+							<a href="" class="link-article">
+								<strong class="title">${data.items[i].title}</strong>
+							</a>
+							<div class="box-meta"></div>
+						</div>
+					</article>
+				`;
+				$("#friend27").append(articleData);
+			}
+		}
+	});
+</script>
