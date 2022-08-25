@@ -8,7 +8,7 @@
     <title>퀴즈 이펙트</title>
 
     <link rel="stylesheet" href="../assets/css/quiz.css">
-    
+
     <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
     <link href="https://webfontworld.github.io/Cafe24Dangdanghae/Cafe24Dangdanghae.css" rel="stylesheet">
 </head>
@@ -24,6 +24,7 @@
                 <li><a href="quizEffect04.html">4</a></li>
                 <li><a href="quizEffect05.html">5</a></li>
                 <li><a href="quizEffect06.html">6</a></li>
+                <li><a href="quizEffect07.html">7</a></li>
             </ul>
         </nav>
     </header>
@@ -83,12 +84,12 @@
         const quizResult = document.querySelector(".quiz__answer .result");      //정답 결과
         const quizInput = document.querySelector(".quiz__answer .input");        //사용자 정답
         const quizView = document.querySelector(".quiz__view");                  //강아지
-       
+        
         //문제 정보
         const answerType = "웹디자인기능사";
-        const answerNum = "2";
-        const answerAsk = "기업의 새로운 이념 구축에 필요한 이미지와 커뮤니케이션 시스템을 의도적, 계획적으로 만들어내는 기업이미지통합 전략은 무엇인가요?";
-        let answerResult = "CIP";
+        const answerNum = 1;
+        const answerAsk = "인접하는 두 색의 경계 부분에 색상, 명도, 채도의 대비가 더욱 강하게 일어나는 현상을 무엇이라고 하는가?";
+        const answerResult = "연변대비";
 
         //문제 출력
         quizType.textContent = answerType;
@@ -106,19 +107,13 @@
             quizConfirm.style.display = "none";
 
             //사용자 정답
-            const userWord = quizInput.value.toLowerCase().trim(); //소문자, 여백
-            answerResult = answerResult.toLowerCase().trim();
-
-            // console.log(userWord)
-            // console.log(answerResult)
+            const userWord = quizInput.value;
 
             //사용자 정답 == 문제 정답
             if(userWord == answerResult){
-                //정답
                 //alert("정답입니다.")
                 quizView.classList.add("like");
             } else {
-                //오답
                 quizView.classList.add("dislike");
                 //alert("오답입니다.")
             }

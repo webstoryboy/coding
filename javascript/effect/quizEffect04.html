@@ -14,8 +14,14 @@
 </head>
 
 <body>
+    <!-- 
+        01. 퀴즈 이펙트 - 정답 확인하기
+        02. 퀴즈 이펙트 - 주관식 확인하기
+        03. 퀴즈 이펙트 - 주관식(여러문제) 확인하기
+        04. 퀴즈 이펙트 - 객관식 확인하기
+    -->
     <header id="header">
-        <h1><a href="../javascript01.html">Quiz</a> <em>객관식(한문제) 유형</em></h1>
+        <h1><a href="#">Quiz</a> <em>객관식 확인하기</em></h1>
         <nav>
             <ul>
                 <li><a href="quizEffect01.html">1</a></li>
@@ -24,6 +30,7 @@
                 <li class="active"><a href="quizEffect04.html">4</a></li>
                 <li><a href="quizEffect05.html">5</a></li>
                 <li><a href="quizEffect06.html">6</a></li>
+                <li><a href="quizEffect07.html">7</a></li>
             </ul>
         </nav>
     </header>
@@ -83,7 +90,6 @@
                     <div class="result"></div>
                 </div>
             </div>
-
         </div>
     </main>
     <!-- //main -->
@@ -104,7 +110,7 @@
         const quizSelects = document.querySelector(".quiz__selects");            //객관식 보기
         const quizChoice = quizSelects.querySelectorAll(".choice");              //객관식 보기
         const quizSelect = quizSelects.querySelectorAll(".select");              //객관식 보기
-
+    
         //문제정보
         const quizInfo = [
             {
@@ -156,8 +162,6 @@
 
         //정답 클릭
         quizConfirm.addEventListener("click", answerQuiz);
-        
-
     </script>
 </body>
 
