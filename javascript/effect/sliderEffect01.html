@@ -291,11 +291,11 @@ updateQuiz();
         
         modalBtn.addEventListener("click", () => {
             modalCont.classList.add("show");
+            modalCont.classList.remove("hide");
         });
         modalClose.addEventListener("click", () => {
-            modalCont.classList.remove("show");
+            modalCont.classList.add("hide");
         });
-
 
         // 탭 메뉴
         const tabBtn = document.querySelectorAll(".modal__box .tabs > div");
