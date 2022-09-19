@@ -37,8 +37,8 @@
                 <li><a href="effect/dataEffect.html">데이터 효과</a></li>
                 <li><a href="effect/mouseEffect.html">마우스 효과</a></li>
                 <li><a href="effect/sliderEffect.html">슬라이드 효과</a></li>
-                <li><a href="effect/parallaxEffect.html">패랠랙스 효과</a></li> 
-                <li><a href="effect/gameEffect.html">게임 효과</a></li> 
+                <li><a href="effect/parallaxEffect.html">패랠랙스 효과</a></li>
+                <li><a href="effect/gameEffect.html">게임 효과</a></li>
             </ul>
         </nav>
     </header>
@@ -67,19 +67,22 @@
                     <li><a href="#sample17">17. 함수 유형 : 객체 생성자 함수</a></li>
                     <li><a href="#sample18">18. 함수 유형 : 객체 생성자 함수</a></li>
                     <li><a href="#sample19">19. 함수 유형 : 객체 리터럴 함수</a></li>
-
-                    
+                    <li><a href="#sample20">20. 즉시 실행 함수</a></li>
+                    <li><a href="#sample21">21. 파라미터 함수</a></li>
+                    <li><a href="#sample22">22. 아규먼트 함수</a></li>
+                    <li><a href="#sample23">22. 재귀 함수</a></li>
+                    <li><a href="#sample24">24. 콜백 함수</a></li>
                 </ul>
             </div>
             <div class="main_sample">
                 <div id="sample01" class="sample">
                     <h3>01. 선언적 함수</h3>
                     <div class="script">
-    <pre><code class="language-js">function func(){
-        document.write("함수가 실행되었습니다.");
-    }
-    func();
-    </code></pre>
+                        <pre><code class="language-js">function func(){
+    document.write("함수가 실행되었습니다.");
+}
+func();
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -95,11 +98,11 @@
                 <div id="sample02" class="sample">
                     <h3>02. 익명 함수</h3>
                     <div class="script">
-    <pre><code class="language-js">const func = function(){
-        document.write("함수가 실행되었습니다.2 ");
-    }
-    func();
-    </code></pre>
+                        <pre><code class="language-js">const func = function(){
+    document.write("함수가 실행되었습니다.2 ");
+}
+func();
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -115,11 +118,11 @@
                 <div id="sample03" class="sample">
                     <h3>03. 매개변수 함수</h3>
                     <div class="script">
-    <pre><code class="language-js">function func(str){
-        document.write(str);
-    }
-    func("함수가 실행되었습니다.");
-    </code></pre>
+                        <pre><code class="language-js">function func(str){
+    document.write(str);
+}
+func("함수가 실행되었습니다.");
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -135,12 +138,12 @@
                 <div id="sample04" class="sample">
                     <h3>04. 리턴값 함수</h3>
                     <div class="script">
-    <pre><code class="language-js">function func(){
-        const str = "함수가 실행되었습니다.4 ";
-        return str;
-    }
-    document.write(func());
-    </code></pre>
+                        <pre><code class="language-js">function func(){
+    const str = "함수가 실행되었습니다.4 ";
+    return str;
+}
+document.write(func());
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -156,11 +159,11 @@
                 <div id="sample05" class="sample">
                     <h3>05. 화살표 함수 : 선언적 함수</h3>
                     <div class="script">
-    <pre><code class="language-js">func = () => {
-        document.write("함수가 실행되었습니다.");
-    }
-    func();
-    </code></pre>
+                        <pre><code class="language-js">func = () => {
+    document.write("함수가 실행되었습니다.");
+}
+func();
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -176,11 +179,11 @@
                 <div id="sample06" class="sample">
                     <h3>06. 화살표 함수 : 익명 함수</h3>
                     <div class="script">
-    <pre><code class="language-js">const func = () => {
-        document.write("함수가 실행되었습니다.6");
-    };
-    func();
-    </code></pre>
+                        <pre><code class="language-js">const func = () => {
+    document.write("함수가 실행되었습니다.6");
+};
+func();
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -196,11 +199,11 @@
                 <div id="sample07" class="sample">
                     <h3>07. 화살표 함수 : 매개변수 함수</h3>
                     <div class="script">
-    <pre><code class="language-js">func = (str) => {
-        document.write(str);
-    }
-    func("함수가 실행되었습니다.7");
-    </code></pre>
+                        <pre><code class="language-js">func = (str) => {
+    document.write(str);
+}
+func("함수가 실행되었습니다.7");
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -216,12 +219,12 @@
                 <div id="sample08" class="sample">
                     <h3>08. 화살표 함수 : 리턴값 함수</h3>
                     <div class="script">
-    <pre><code class="language-js">func = () => {
-        const str = "함수가 실행되었습니다.";
-        return str;
-    }
-    document.write(func());
-    </code></pre>
+                        <pre><code class="language-js">func = () => {
+    const str = "함수가 실행되었습니다.";
+    return str;
+}
+document.write(func());
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -237,7 +240,7 @@
                 <div id="sample09" class="sample">
                     <h3>09. 화살표 함수 : 익명함수 + 매개변수 + 리턴값</h3>
                     <div class="script">
-<pre><code class="language-js">const func = (str) => {
+                        <pre><code class="language-js">const func = (str) => {
     return str;
 };
 document.write(func("함수가실행되었습니다."));
@@ -257,7 +260,7 @@ document.write(func("함수가실행되었습니다."));
                 <div id="sample10" class="sample">
                     <h3>10. 화살표 함수 : 익명함수 + 매개변수 + 리턴값</h3>
                     <div class="script">
-<pre><code class="language-js">const func = str => { 
+                        <pre><code class="language-js">const func = str => { 
     return str;
 }
 document.write(func("함수가 실행되었습니다."));
@@ -277,7 +280,7 @@ document.write(func("함수가 실행되었습니다."));
                 <div id="sample11" class="sample">
                     <h3>11. 화살표 함수 : 익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
                     <div class="script">
-<pre><code class="language-js">const func = str => str;
+                        <pre><code class="language-js">const func = str => str;
     document.write(func("함수가 실행되었습니다."));
 }
 </code></pre>
@@ -296,9 +299,9 @@ document.write(func("함수가 실행되었습니다."));
                 <div id="sample12" class="sample">
                     <h3>12. 화살표 함수 : 선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략</h3>
                     <div class="script">
-    <pre><code class="language-js">func = str => str;
-        document.write(func("함수가 실행되었습니다.12"));
-    </code></pre>
+                        <pre><code class="language-js">func = str => str;
+document.write(func("함수가 실행되었습니다.12"));
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -314,13 +317,13 @@ document.write(func("함수가 실행되었습니다."));
                 <div id="sample13" class="sample">
                     <h3>13. 함수 유형 : 함수와 매개변수를 이용한 형태</h3>
                     <div class="script">
-    <pre><code class="language-js">function func(num, str1, str2){
-        document.write(num + ". " +str1 + "가 "+ str2 +"되었습니다.<br>");
-    }
-    func("1", "함수", "실행");
-    func("2", "자바스크립트", "실행");
-    func("3", "제이쿼리", "실행");
-    </code></pre>
+                        <pre><code class="language-js">function func(num, str1, str2){
+    document.write(num + ". " +str1 + "가 "+ str2 +"되었습니다.<br>");
+}
+func("1", "함수", "실행");
+func("2", "자바스크립트", "실행");
+func("3", "제이쿼리", "실행");
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -338,21 +341,21 @@ document.write(func("함수가 실행되었습니다."));
                 <div id="sample14" class="sample">
                     <h3>14. 함수 유형 : 함수와 변수를 이용한 형태</h3>
                     <div class="script">
-    <pre><code class="language-js">function func(num, str1, str2){
-        document.write(num + ". " +str1 + "가 "+ str2 +"되었습니다.<br>");
-    }
-    const youNum1 = 1;
-    const youNum2 = 2;
-    const youNum3 = 3;
-    const youStr1 = "함수";
-    const youStr2 = "자바스크립트";
-    const youStr3 = "제이쿼리";
-    const youCom1 = "실행";
+                        <pre><code class="language-js">function func(num, str1, str2){
+    document.write(num + ". " +str1 + "가 "+ str2 +"되었습니다.<br>");
+}
+const youNum1 = 1;
+const youNum2 = 2;
+const youNum3 = 3;
+const youStr1 = "함수";
+const youStr2 = "자바스크립트";
+const youStr3 = "제이쿼리";
+const youCom1 = "실행";
 
-    func(youNum1, youStr1, youCom1);
-    func(youNum2, youStr2, youCom1);
-    func(youNum3, youStr3, youCom1);
-    </code></pre>
+func(youNum1, youStr1, youCom1);
+func(youNum2, youStr2, youCom1);
+func(youNum3, youStr3, youCom1);
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -370,31 +373,31 @@ document.write(func("함수가 실행되었습니다."));
                 <div id="sample15" class="sample">
                     <h3>15. 함수 유형 : 함수와 배열, 객체를 이용한 형태</h3>
                     <div class="script">
-    <pre><code class="language-js">function func(num, str1, str2){
-        document.write(num + ". " +str1 + "가 "+ str2 +"되었습니다.<br>");
+                        <pre><code class="language-js">function func(num, str1, str2){
+    document.write(num + ". " +str1 + "가 "+ str2 +"되었습니다.<br>");
+}
+const info = [
+    {
+        num : "1",
+        name : "함수",
+        com : "실행"
+    },
+    {
+        num : "2",
+        name : "자바스크립트",
+        com : "실행"
+    },
+    {
+        num : "3",
+        name : "제이쿼리",
+        com : "실행"
     }
-    const info = [
-        {
-            num : "1",
-            name : "함수",
-            com : "실행"
-        },
-        {
-            num : "2",
-            name : "자바스크립트",
-            com : "실행"
-        },
-        {
-            num : "3",
-            name : "제이쿼리",
-            com : "실행"
-        }
-    ];
+];
 
-    func(info[0].num, info[0].name, info[0].com);
-    func(info[1].num, info[1].name, info[1].com);
-    func(info[2].num, info[2].name, info[2].com);
-    </code></pre>
+func(info[0].num, info[0].name, info[0].com);
+func(info[1].num, info[1].name, info[1].com);
+func(info[2].num, info[2].name, info[2].com);
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -412,32 +415,32 @@ document.write(func("함수가 실행되었습니다."));
                 <div id="sample16" class="sample">
                     <h3>16. 함수 유형 : 함수와 배열, 객체를 이용한 형태</h3>
                     <div class="script">
-    <pre><code class="language-js">const info = {
-        num1 : 1,
-        name1 : "함수",
-        word1 : "실행",
-        num2 : 2,
-        name2 : "자바스크립트",
-        word2 : "실행",
-        num3 : 3,
-        name3 : "제이쿼리",
-        word3 : "실행",
+                        <pre><code class="language-js">const info = {
+    num1 : 1,
+    name1 : "함수",
+    word1 : "실행",
+    num2 : 2,
+    name2 : "자바스크립트",
+    word2 : "실행",
+    num3 : 3,
+    name3 : "제이쿼리",
+    word3 : "실행",
 
-        result1 : function(){
-            document.write(info.num1 + ". " + info.name1 + "가 "+ info.word1 + "되었습니다.<br>");
-        },
-        result2 : function(){
-            document.write(info.num2 + ". " + info.name2 + "가 "+ info.word2 + "되었습니다.<br>");
-        },
-        result3 : function(){
-            document.write(info.num3 + ". " + info.name3 + "가 "+ info.word3 + "되었습니다.<br>");
-        }
+    result1 : function(){
+        document.write(info.num1 + ". " + info.name1 + "가 "+ info.word1 + "되었습니다.<br>");
+    },
+    result2 : function(){
+        document.write(info.num2 + ". " + info.name2 + "가 "+ info.word2 + "되었습니다.<br>");
+    },
+    result3 : function(){
+        document.write(info.num3 + ". " + info.name3 + "가 "+ info.word3 + "되었습니다.<br>");
     }
+}
 
-    info.result1();
-    info.result2();
-    info.result3();
-    </code></pre>
+info.result1();
+info.result2();
+info.result3();
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -455,26 +458,26 @@ document.write(func("함수가 실행되었습니다."));
                 <div id="sample17" class="sample">
                     <h3>17. 함수 유형 : 객체 생성자 함수</h3>
                     <div class="script">
-    <pre><code class="language-js">function func(num, name, word){
-        this.num = num;
-        this.name = name;
-        this.word = word;
+                        <pre><code class="language-js">function func(num, name, word){
+    this.num = num;
+    this.name = name;
+    this.word = word;
 
-        this.result = function(){
-            document.write(this.num + ". " + this.name + "가 "+ this.word + "되었습니다.<br>");
-        }
+    this.result = function(){
+        document.write(this.num + ". " + this.name + "가 "+ this.word + "되었습니다.<br>");
     }
+}
 
-    //인스턴스 생성
-    const info1 = new func("1", "함수", "실행");
-    const info2 = new func("2", "자바스크립트", "실행");
-    const info3 = new func("3", "제이쿼리", "실행");
+//인스턴스 생성
+const info1 = new func("1", "함수", "실행");
+const info2 = new func("2", "자바스크립트", "실행");
+const info3 = new func("3", "제이쿼리", "실행");
 
-    //실행
-    info1.result();
-    info2.result();
-    info3.result();
-    </code></pre>
+//실행
+info1.result();
+info2.result();
+info3.result();
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -492,26 +495,26 @@ document.write(func("함수가 실행되었습니다."));
                 <div id="sample18" class="sample">
                     <h3>18. 함수 유형 : 객체 생성자 함수</h3>
                     <div class="script">
-    <pre><code class="language-js">function func(num, name, word){
-        this.num = num;
-        this.name = name;
-        this.word = word;
-    }
+                        <pre><code class="language-js">function func(num, name, word){
+    this.num = num;
+    this.name = name;
+    this.word = word;
+}
 
-    func.prototype.result = function(){
-        document.write(this.num + ". " + this.name + "가 "+ this.word + "되었습니다.<br>");
-    }
+func.prototype.result = function(){
+    document.write(this.num + ". " + this.name + "가 "+ this.word + "되었습니다.<br>");
+}
 
-    //인스턴스 생성
-    const info1 = new func("1", "함수", "실행");
-    const info2 = new func("2", "자바스크립트", "실행");
-    const info3 = new func("3", "제이쿼리", "실행");
+//인스턴스 생성
+const info1 = new func("1", "함수", "실행");
+const info2 = new func("2", "자바스크립트", "실행");
+const info3 = new func("3", "제이쿼리", "실행");
 
-    //실행
-    info1.result();
-    info2.result();
-    info3.result();
-    </code></pre>
+//실행
+info1.result();
+info2.result();
+info3.result();
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -529,34 +532,34 @@ document.write(func("함수가 실행되었습니다."));
                 <div id="sample19" class="sample">
                     <h3>19. 함수 유형 : 객체 리터럴 함수</h3>
                     <div class="script">
-    <pre><code class="language-js">function func(num, name, word){
-        this.num = num;
-        this.name = name;
-        this.word = word;
+                        <pre><code class="language-js">function func(num, name, word){
+    this.num = num;
+    this.name = name;
+    this.word = word;
+}
+
+func.prototype = {
+    result1 : function(){
+        document.write(this.num + ". " + this.name + "가 "+ this.word + "되었습니다.<br>");
+    },
+    result2 : function(){
+        document.write(this.num + ". " + this.name + "가 "+ this.word + "되었습니다.<br>");
+    },
+    result3 : function(){
+        document.write(this.num + ". " + this.name + "가 "+ this.word + "되었습니다.<br>");
     }
+}
 
-    func.prototype = {
-        result1 : function(){
-            document.write(this.num + ". " + this.name + "가 "+ this.word + "되었습니다.<br>");
-        },
-        result2 : function(){
-            document.write(this.num + ". " + this.name + "가 "+ this.word + "되었습니다.<br>");
-        },
-        result3 : function(){
-            document.write(this.num + ". " + this.name + "가 "+ this.word + "되었습니다.<br>");
-        }
-    }
+//인스턴스 생성
+const info1 = new func("1", "함수", "실행");
+const info2 = new func("2", "자바스크립트", "실행");
+const info3 = new func("3", "제이쿼리", "실행");
 
-    //인스턴스 생성
-    const info1 = new func("1", "함수", "실행");
-    const info2 = new func("2", "자바스크립트", "실행");
-    const info3 = new func("3", "제이쿼리", "실행");
-
-    //실행
-    info1.result1();
-    info2.result2();
-    info3.result3();
-    </code></pre>
+//실행
+info1.result1();
+info2.result2();
+info3.result3();
+</code></pre>
                     </div>
                     <div class="result">
                         <details>
@@ -574,7 +577,7 @@ document.write(func("함수가 실행되었습니다."));
                 <div id="sample20" class="sample">
                     <h3>20. 즉시 실행 함수</h3>
                     <div class="script">
-<pre><code class="language-js">(function func(){
+                        <pre><code class="language-js">(function func(){
     document.write("함수가 실행되었습니다.");
 }());
 
@@ -587,7 +590,7 @@ document.write(func("함수가 실행되었습니다."));
                         <details>
                             <summary>결과보기</summary>
                             <div class="sample20_result">
-                             
+                                함수가 실행되었습니다.
                             </div>
                         </details>
                     </div>
@@ -597,7 +600,7 @@ document.write(func("함수가 실행되었습니다."));
                 <div id="sample21" class="sample">
                     <h3>21. 파라미터 함수</h3>
                     <div class="script">
-<pre><code class="language-js">// function func(str){
+                        <pre><code class="language-js">// function func(str){
 //     document.write(str);
 // }
 // func("함수가 실행되었습니다.")
@@ -612,7 +615,7 @@ func();
                         <details>
                             <summary>결과보기</summary>
                             <div class="sample20_result">
-                             
+                                함수가 실행되었습니다.
                             </div>
                         </details>
                     </div>
@@ -622,7 +625,7 @@ func();
                 <div id="sample22" class="sample">
                     <h3>22. 아규먼트 함수</h3>
                     <div class="script">
-<pre><code class="language-js">function func(a, b){
+                        <pre><code class="language-js">function func(a, b){
     document.write(arguments[0]);
     document.write(arguments[1]);
 }
@@ -633,7 +636,7 @@ func("함수가 실행되었습니다.", "함수가 실행되었습니다.");
                         <details>
                             <summary>결과보기</summary>
                             <div class="sample20_result">
-                             
+                                함수가 실행되었습니다.
                             </div>
                         </details>
                     </div>
@@ -656,13 +659,6 @@ func("함수가 실행되었습니다.", "함수가 실행되었습니다.");
         hljs.highlightAll();
     </script>
     <script>
-
-        
-        function func(a, b){
-            document.write(arguments[0]);
-            document.write(arguments[1]);
-        }
-        func("함수가 실행되었습니다.", "함수가 실행되었습니다.");
 
 
     </script>

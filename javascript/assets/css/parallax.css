@@ -1,54 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'NexonLv1Gothic';
 }
 
 body {
-    width: 100%;
-    height: 100vh;
+    background-color: #222;
+    color: #fff;
+    font-family: 'NexonLv1Gothic';
+    font-weight: 300;
 }
-body.img01 {
-    background: #000 url(../img/effect_bg01@2x-min.jpg) no-repeat center / cover;
-}
-body.img02 {
-    background: #000 url(../img/effect_bg02@2x-min.jpg) no-repeat center / cover;
-}
-body.img03 {
-    background: #000 url(../img/effect_bg03@2x-min.jpg) no-repeat center / cover;
-}
-body.img04 {
-    background: #000 url(../img/effect_bg04@2x-min.jpg) no-repeat center / cover;
-}
-body.img05 {
-    background: #000 url(../img/effect_bg05@2x-min.jpg) no-repeat center / cover;
-}
-body.img06 {
-    background: #000 url(../img/effect_bg06@2x-min.jpg) no-repeat center / cover;
-}
-body.img07 {
-    background: #000 url(../img/effect_bg07@2x-min.jpg) no-repeat center / cover;
-}
-body.img08 {
-    background: #000 url(../img/effect_bg08@2x-min.jpg) no-repeat center / cover;
-}
-body.img09 {
-    background: #000 url(../img/effect_bg09@2x-min.jpg) no-repeat center / cover;
-}
-body.img10 {
-    background: #000 url(../img/effect_bg10@2x-min.jpg) no-repeat center / cover;
-}
-body::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(23, 20, 88, 0.386);
-    z-index: -1;
-}
+
 img {
     width: 100%;
     vertical-align: top;
@@ -57,19 +18,11 @@ a {
     color: #fff;
     text-decoration: none;
 }
+li {
+    list-style: none;
+}
 
-/* scroll */
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-::-webkit-scrollbar-track {
-    background: #1f224a26;
-}
-::-webkit-scrollbar-thumb {
-    background: rgba(69, 71, 100, 0.321);
-    border-radius: 20px;
-}
+
 
 /* layout */
 #header {
@@ -298,6 +251,19 @@ a {
     animation: opacityIn 0.5s ease forwards;
 }
 
+/* scroll */
+.modal__box ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+.modal__box ::-webkit-scrollbar-track {
+    background: #1f224a26;
+}
+.modal__box ::-webkit-scrollbar-thumb {
+    background: rgba(69, 71, 100, 0.321);
+    border-radius: 20px;
+}
+
 
 @keyframes foldOut {
     0%   {transform: scaleX(0) scaleY(0.001);}
@@ -353,12 +319,3 @@ a {
     }
 }
 
-
-
-/* 요소를 안보이게 하는 방법
-    1. display: none;       (애니메이션X, 영역X)
-    2. opacity: 0;          (애니메이션O, 영역O)
-    3. visibility: hidden;  (애니메이션X, 영역X)
-    4. transform: scale(0); (애니메이션O, 영역X)
-    5. width: 0; height: 0; (애니메이션X, 영역X) : blind
-*/
