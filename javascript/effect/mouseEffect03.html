@@ -54,62 +54,28 @@
         }
         .mouse__cursor {
             position: absolute;
-            left: 0;
+            left: 0; 
             top: 0;
-            width: 10px;
-            height: 10px;
-            z-index: 9999;
+            width: 200px;
+            height: 200px;
+            z-index: -1;
             border-radius: 50%;
-            background: rgba(255,255,255,0.3);
-            user-select: none;
-            pointer-events: none;
-            transition: transform 0.3s, opactiy 0.3s;
-        }
-        .mouse__cursor2 {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 30px;
-            height: 30px;
-            z-index: 9998;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.5);
-            user-select: none;
-            pointer-events: none;
-            transition: transform 0.3s, opactiy 0.3s;
-        }
-        .mouse__cursor.active {
-            transform: scale(0);
-        }
-        .mouse__cursor2.active {
-            transform: scale(5);
-            background: rgba(255,166,0,0.6);
-        }
-        .mouse__cursor.active2 {
-            transform: scale(2);
-        }
-        .mouse__cursor2.active2 {
-            transform: scale(5);
-            background: rgba(0, 255, 115, 0.1);
-        }
-        .mouse__cursor.active3 {
-            transform: scale(3);
-            background: rgba(0, 4, 255, 1);
-        }
-        .mouse__cursor2.active3 {
-            transform: scale(5);
-            background: rgba(0, 4, 255, 0.6);
+            background-image: url(../assets/img/effect_bg13@2x-min.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            border: 5px solid #fff;
         }
     </style>
 </head>
-<body class="img12 bg01">
+<body class="img13 bg01">
     <header id="header">
-        <h1><a href="mouseEffect.html">Javascript Mouse Effect02</a></h1>
-        <p>마우스 이펙트 - 마우스 따라다니기(GSAP)</p>
+        <h1><a href="mouseEffect.html">Javascript Mouse Effect03</a></h1>
+        <p>마우스 이펙트 - 조명 효과</p>
         <ul>
             <li><a href="mouseEffect01.html">1</a></li>
-            <li class="active"><a href="mouseEffect02.html">2</a></li>
-            <li><a href="mouseEffect03.html">3</a></li>
+            <li><a href="mouseEffect02.html">2</a></li>
+            <li class="active"><a href="mouseEffect03.html">3</a></li>
             <li><a href="mouseEffect04.html">4</a></li>
             <li><a href="mouseEffect05.html">5</a></li>
             <li><a href="mouseEffect06.html">6</a></li>
@@ -120,10 +86,9 @@
     <main id="main">
         <section id="mouseType">
             <div class="mouse__cursor"></div>
-            <div class="mouse__cursor2"></div>
             <div class="mouse__wrap">
-                <p>when money speaks, ther <span>truth</span> keeps silent</p>
-               <p>돈이 말할 때는 <span>진실</span>은 입을 다문다.</p>
+                <p>I <span>Dream</span> my Painting and I Paing my <span>Dream</span></p>
+               <p>나는 나의 그림을 <span>꿈</span> 꾸고, 내 <span>꿈</span>을 그린다.</p>
             </div>
         </section>
     </main>
@@ -225,51 +190,31 @@
     <script src="../assets/js/gsap.min.js"></script>
     <script>
         const cursor = document.querySelector(".mouse__cursor");
-        const cursor2 = document.querySelector(".mouse__cursor2");
-        const span = document.querySelectorAll(".mouse__wrap span");
 
-        window.addEventListener("mousemove", e => {
-            // 커서 좌표값 할당
-            // cursor.style.left = e.pageX -5 + "px";
-            // cursor.style.top = e.pageY -5 + "px";
-            // cursor2.style.left = e.pageX -15 + "px";
-            // cursor2.style.top = e.pageY -15 + "px";
+        // const circleW = cursor.offsetWidth;     //200 
+        // const circleH = cursor.offsetHeight;    //200 
+        // const circle2 = cursor.clientWidth;     //190 : 보더값 제외
 
-            // GSAP
-            gsap.to(cursor, {duration: 0.3, left: e.pageX -5, top: e.pageY -5});
-            gsap.to(cursor2, {duration: 0.8, left: e.pageX -15, top: e.pageY -15});
+        const circle = cursor.getBoundingClientRect();
+        
+        console.log(circle);
+        // const DOMRect = {
+        //     x: 0,
+        //     y: 0,
+        //     bottom: 200,
+        //     height: 200,
+        //     left: 0,
+        //     right: 200,
+        //     top: 0,
+        //     width: 200
+        // }
 
-            // 오버 효과
-            // mouseenter / mouseover / 이벤트 버블링
-            span.forEach(span => {
-                span.addEventListener("mouseenter", () => {
-                    cursor.classList.add("active");
-                    cursor2.classList.add("active");
-                });
-                span.addEventListener("mouseleave", () => {
-                    cursor.classList.remove("active");
-                    cursor2.classList.remove("active");
-                });
+        window.addEventListener("mousemove", (e) => {
+            gsap.to(cursor, {
+                duration: 0.5, 
+                left: e.pageX - circle.width/2, 
+                top: e.pageY - circle.height/2,
             });
-
-            document.querySelector(".modal__btn").addEventListener("mouseenter", () => {
-                cursor.classList.add("active2");
-                cursor2.classList.add("active2");
-            });
-            document.querySelector(".modal__btn").addEventListener("mouseleave", () => {
-                cursor.classList.remove("active2");
-                cursor2.classList.remove("active2");
-            });
-
-            document.querySelector("#header").addEventListener("mouseenter", () => {
-                cursor.classList.add("active3");
-                cursor2.classList.add("active3");
-            });
-            document.querySelector("#header").addEventListener("mouseleave", () => {
-                cursor.classList.remove("active3");
-                cursor2.classList.remove("active3");
-            });
-
         });
     </script>
 </body>

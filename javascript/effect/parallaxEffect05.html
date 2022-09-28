@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>패럴랙스 이펙트02</title>
+    <title>패럴랙스 이펙트05</title>
 
     <link rel="stylesheet" href="../assets/css/parallax.css">
     <link rel="stylesheet" href="../assets/css/dracula.css">
@@ -23,6 +23,7 @@
             background-color: rgba(0,0,0,0.4);
             padding: 20px 30px;
             border-radius: 50px;
+            transition: top .4s ease;
         }
         #parallax__nav li {
             display: inline;
@@ -41,7 +42,6 @@
             border-radius: 20px;
             box-sizing: content-box;
         }
-
         #parallax__cont {
             max-width: 1600px;
             width: 98%;
@@ -90,7 +90,6 @@
         }
         .content__item__img {
             position: absolute;
-            background-image: url(../assets/img/effect_bg18-min.jpg);
             background-repeat: no-repeat;
             background-position: center center;
             background-size: cover;
@@ -99,7 +98,7 @@
             left: -5%;
             top: -5%;
             filter: saturate(0%);
-            transition: all 1s;
+            /* transition: all 1s; */
         }
         .content__item:nth-child(1) .content__item__img {
             background-image: url(../assets/img/effect_bg18-min.jpg);
@@ -139,7 +138,6 @@
             margin-left: auto;
             margin-right: -4vw;
         }
-
         #parallax__info {
             position: fixed;
             left: 20px;
@@ -186,75 +184,23 @@
                 bottom: 10px;
             }
         }
-        #parallax__dot {
-            position: fixed;
-            right: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 10000;
-            background: rgba(0,0,0,0.4);
-            padding: 20px 10px;
-            border-radius: 30px;
-        }
-        #parallax__dot li {
-            position: relative;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            margin: 12px 8px;
-            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
-            transition: box-shadow .2s ease;
-        }
-        #parallax__dot li a {
-            background: #fff;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            border-radius: 50%;
-            transition: transform .2s ease;
-        }
-        #parallax__dot li.active {
-            box-shadow: 0 0 0 2px rgba(255, 255, 255, 1);
-        }
-        #parallax__dot li.active a {
-            transform: scale(0.4);
-        }
-
-        #parallax__dot li span {display: none;}
     </style>
 </head>
-<body class="img11 bg01">
+<body>
     <header id="header">
-        <h1><a href="parallaxEffect.html">Javascript Parallax Effect02</a></h1>
-        <p>패럴랙스 이펙트 - 사이드 메뉴</p>
+        <h1><a href="parallaxEffect.html">Javascript Parallax Effect05</a></h1>
+        <p>패럴랙스 이펙트 - 이질감 효과</p>
         <ul>
             <li><a href="parallaxEffect01.html">1</a></li>
-            <li class="active"><a href="parallaxEffect02.html">2</a></li>
+            <li><a href="parallaxEffect02.html">2</a></li>
             <li><a href="parallaxEffect03.html">3</a></li>
             <li><a href="parallaxEffect04.html">4</a></li>
-            <li><a href="parallaxEffect05.html">5</a></li>
+            <li class="active"><a href="parallaxEffect05.html">5</a></li>
             <li><a href="parallaxEffect06.html">6</a></li>
             <li><a href="parallaxEffect07.html">7</a></li>
         </ul>
     </header>
     <!-- //header -->
-
-    <nav id="parallax__dot">
-        <ul>
-            <li class="active"><a href="#section1"><span>메뉴1</span></a></li>
-            <li><a href="#section2"><span>메뉴2</span></a></li>
-            <li><a href="#section3"><span>메뉴3</span></a></li>
-            <li><a href="#section4"><span>메뉴4</span></a></li>
-            <li><a href="#section5"><span>메뉴5</span></a></li>
-            <li><a href="#section6"><span>메뉴6</span></a></li>
-            <li><a href="#section7"><span>메뉴7</span></a></li>
-            <li><a href="#section8"><span>메뉴8</span></a></li>
-            <li><a href="#section9"><span>메뉴9</span></a></li>
-        </ul>
-    </nav>
-    <!-- //parallax__nav -->
 
     <main id="parallax__cont">
         <div id="contents">
@@ -348,7 +294,6 @@
             </section>
             <!-- //section9 -->
         </div>
-        
     </main>
     <!-- //main -->
 
@@ -432,74 +377,6 @@
                         </div>
                         <div>
 <pre><code class="language-css">
-    .modal__box::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
-    }
-    .modal__box::-webkit-scrollbar-track {
-        background: #1f224a26;
-    }
-    .modal__box::-webkit-scrollbar-thumb {
-        background: rgba(69, 71, 100, 0.321);
-        border-radius: 20px;
-    }
-    
-    
-    @keyframes foldOut {
-        0%   {transform: scaleX(0) scaleY(0.001);}
-        50%  {transform: scaleX(1) scaleY(0.001);}
-        100% {transform: scaleX(1) scaleY(1);}
-    }
-    @keyframes foldIn {
-        0%   {transform: scaleX(1) scaleY(1);}
-        50%  {transform: scaleX(1) scaleY(0.001);}
-        100% {transform: scaleX(0) scaleY(0.001);}
-    }
-    @keyframes zoomOut {
-        0%   {transform: scale(0);}
-        100% {transform: scale(1);}
-    }
-    @keyframes zoomIn {
-        0%   {transform: scale(1);}
-        100% {transform: scale(0);}
-    }
-    @keyframes opacityOut {
-        0%   {opacity:0;}
-        100% {opacity:1;}
-    }
-    @keyframes opacityIn {
-        0%   {opacity:1;}
-        100% {opacity:0;}
-    }
-    
-    @media (max-width: 1100px){
-        .modal__box .title {
-            overflow: hidden;
-        }
-        .modal__box .title .dot {
-            display: none;
-        }
-        .modal__box .title .tabs {
-            margin-left: 0;
-        }
-        .modal__box .title .tabs > div .close {
-            display: none;
-        }
-    }
-    @media (max-width: 800px){
-        #header {
-            width: 100%;
-            text-align: center;
-        }
-        #header h1 {
-            line-height: 1.4;
-        }
-        .modal__box {
-            width: 96%;
-        }
-    }
-    
-    
 </code></pre>
                         </div>
                     </div>
@@ -517,43 +394,34 @@
 
 
     <script src="../assets/js/highlight.min.js"></script>
+    <script src="../assets/js/gsap.min.js"></script>
     <script src="../assets/js/common.js"></script>
     <script>
-        document.querySelectorAll("#parallax__dot a").forEach(el => {
-            el.addEventListener("click", e => {
-                e.preventDefault();
+        function scroll(){
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-                document.querySelector(el.getAttribute("href")).scrollIntoView({behavior: "smooth"});
-            })
-        });
+            document.querySelector("#parallax__info span").innerText = Math.ceil(scrollTop);
 
-        window.addEventListener("scroll", () => {
-            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+            document.querySelectorAll(".content__item").forEach(item => {
+                const target1 = item.querySelector(".content__item__img");
+                const target2 = item.querySelector(".content__item__desc");
+                const target3 = item.querySelector(".content__item__num");
 
-            document.querySelector("#parallax__info span").innerText = Math.floor(scrollTop);
+                let offset1 = (scrollTop - item.offsetTop) * 0.1;
+                let offset2 = (scrollTop - item.offsetTop) * 0.15;
+                let offset3 = (scrollTop - item.offsetTop) * 0.2;
 
-            document.querySelectorAll(".content__item").forEach((e, i) => {
-                if(scrollTop >= e.offsetTop - 10){
-                    document.querySelectorAll("#parallax__dot li").forEach(li => {
-                        li.classList.remove("active");
-                    });
-                    document.querySelector("#parallax__dot li:nth-child("+(i+1)+")").classList.add("active");
-                }
-            })
-        });
+                // target1.style.transform = `translateY(${offset1}px)`;
+                // target2.style.transform = `translateX(${offset2}px)`;
 
+                gsap.to(target1, {duration: .3, y: offset1, ease: "power4.out"})
+                gsap.to(target2, {duration: .3, y: offset2})
+                gsap.to(target3, {duration: .3, y: offset3, ease: "expo.out"})
+            });
 
-        // window.scroll(0, 1000);
-        // window.scroll({left: 0, top: 2000});
-        // window.scroll({left: 0, top: 2000, behavior: "smooth"});
-
-        // window.scrollTo(0, 1000);
-        // window.scrollTo({left: 0, top: 1000});
-        // window.scrollTo({left: 0, top: 1000, behavior: "smooth"});
-
-        // window.scrollBy(0, 1000);
-        // window.scrollBy({left: 0, top: 1000});
-        // window.scrollBy({left: 0, top: 1000, behavior: "smooth"});
+            requestAnimationFrame(scroll);
+        }
+        scroll();
     </script>
 </body>
 </html>
