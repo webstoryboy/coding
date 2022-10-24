@@ -86,7 +86,7 @@
 </head>
 <body class="img07">
     <header id="header">
-        <h1>Javascript Slider Effect04</h1>
+        <h1><a href="searchEffect.html">Javascript Slider Effect04</a></h1>
         <p>슬라이드 이펙트 - 이미지 슬라이트(버튼)</p>
         <ul>
             <li><a href="sliderEffect01.html">1</a></li>
@@ -244,7 +244,11 @@
         
         //왼쪽 버튼 클릭
         sliderBtnPrev.addEventListener("click", () => {
-            gotoSlider(-1);
+            let prevIndex = (currentIndex + (sliderCount - 1)) % sliderCount;
+            // 첫번째 있을 때 0 --> 4 
+            // if( currentIndex == 0 ) prevIndex = sliderCount - 1;
+            // 0 1 2 3 4 
+            gotoSlider(prevIndex);
         });
 
         //오른쪽 버튼 클릭
